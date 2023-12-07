@@ -1,5 +1,7 @@
 # aoc2023
 
+adventofcode.com
+
 ## How to run a day?
 
 ```
