@@ -5,6 +5,7 @@ import (
 	day1 "aoc2023/pkg/days/1"
 	day2 "aoc2023/pkg/days/2"
 	day3 "aoc2023/pkg/days/3"
+	day4 "aoc2023/pkg/days/4"
 	"aoc2023/pkg/utils"
 	"fmt"
 	"log"
@@ -32,6 +33,8 @@ func SelectDay() {
 		day = day2.Day2{}
 	case 3:
 		day = day3.Day3{}
+	case 4:
+		day = day4.Day4{}
 	}
 
 	input := utils.ReadInput(dayNumber, "input")
