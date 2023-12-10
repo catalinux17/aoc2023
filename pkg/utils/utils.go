@@ -7,17 +7,13 @@ import (
 	"os"
 )
 
-func ReadInput(dayNumber int, test bool) []string {
+func ReadInput(dayNumber int, inputFile string) []string {
 	currentDir, err := os.Getwd()
 	if err != nil {
 		log.Fatal(err)
 	}
 	var filePath string
-	if test {
-		filePath = fmt.Sprintf("%s/pkg/days/%d/test_input", currentDir, dayNumber)
-	} else {
-		filePath = fmt.Sprintf("%s/pkg/days/%d/input", currentDir, dayNumber)
-	}
+	filePath = fmt.Sprintf("%s/pkg/days/%d/%s", currentDir, dayNumber, inputFile)
 	file, err := os.Open(filePath)
 	if err != nil {
 		log.Fatal(err)

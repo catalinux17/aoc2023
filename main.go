@@ -3,6 +3,8 @@ package main
 import (
 	"aoc2023/pkg/days"
 	day1 "aoc2023/pkg/days/1"
+	day2 "aoc2023/pkg/days/2"
+	day3 "aoc2023/pkg/days/3"
 	"aoc2023/pkg/utils"
 	"fmt"
 	"log"
@@ -26,9 +28,13 @@ func SelectDay() {
 	switch dayNumber {
 	case 1:
 		day = day1.Day1{}
+	case 2:
+		day = day2.Day2{}
+	case 3:
+		day = day3.Day3{}
 	}
 
-	input := utils.ReadInput(dayNumber, false)
+	input := utils.ReadInput(dayNumber, "input")
 
 	fmt.Println("Day number: ", dayNumber)
 	output, err := day.Part1(input)
